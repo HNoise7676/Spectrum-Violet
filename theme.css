@@ -1,0 +1,54 @@
+/* --- 1. Base Wallpaper Engine --- */
+html, body, #root, [class*="appMount"], [class*="app_"] {
+    background: linear-gradient(rgba(25, 18, 41, 0.25), rgba(25, 18, 41, 0.25)), 
+                url("https://fluxerusercontent.com/attachments/1520789424449794048/1521114558402408448/bg-12-6-2026.png") 
+                center/cover no-repeat fixed !important;
+}
+
+/* --- 2. Intense Panel Stripping (Clears out the solid top headers & overlays) --- */
+[class*="bg_"], 
+[class*="container_"], 
+[class*="chat_"], 
+[class*="sidebar_"], 
+[class*="panels_"],
+[class*="mainCard_"],
+[class*="title_"],
+header {
+    background: transparent !important;
+}
+
+:root { 
+    /* --- 3. High Visibility Soft Tints (Allows details to pop through) --- */
+    --background-primary: rgba(25, 18, 41, 0.15) !important;       
+    --background-secondary: rgba(32, 23, 51, 0.2) !important;     
+    --background-secondary-lighter: rgba(32, 23, 51, 0.1) !important; 
+    --background-secondary-alt: rgba(40, 29, 64, 0.2) !important; 
+    --background-tertiary: rgba(40, 29, 64, 0.2) !important; 
+    --background-textarea: rgba(51, 37, 82, 0.6) !important;      
+
+    /* --- Theme Highlights --- */
+    --text-normal: #f0e6ff !important;              
+    --text-muted: #cdbfe3 !important;               
+    --text-link: oklch(75% 0.12 310) !important;    
+    --background-header-primary: oklch(75% 0.12 310) !important;
+    --background-modifier-hover: rgba(190, 155, 255, 0.15) !important;    
+    --background-modifier-selected: rgba(190, 155, 255, 0.3) !important;  
+    --background-modifier-accent: oklch(75% 0.12 310) !important;        
+    --status-online: oklch(70% 0.11 170) !important;
+    --status-dnd: oklch(70% 0.12 0) !important;
+    --status-idle: oklch(75% 0.11 90) !important;
+    --status-offline: #6e6382 !important;  
+}
+
+/* --- 4. Solid Settings Layer (Keeps settings flat dark purple) --- */
+[class*="standardSidebarView"], 
+[class*="sidebarRegion"], 
+[class*="contentRegion"], 
+[class*="layer_"] ~ [class*="layer_"] {
+    background: #191229 !important;
+    --background-primary: #191229 !important;
+    --background-secondary: #201733 !important;
+    --background-secondary-lighter: #201733 !important;
+    --background-secondary-alt: #281d40 !important;
+    --background-tertiary: #281d40 !important;
+}
